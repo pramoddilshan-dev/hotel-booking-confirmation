@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import StackedCards from './components/StackedCards';
+import InfoGrid from './components/InfoGrid';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,10 +60,8 @@ export default function App() {
           {/* Stacked Cards Section */}
           <StackedCards />
 
-          {/* Placeholder for Bottom Info Grid (Arrival, Wifi, Breakfast) */}
-          <div className="mt-8 p-6 border-2 border-dashed border-neutral-300 rounded-3xl text-center text-neutral-500 font-mono text-sm">
-            [ Info Grid Cards Section will go here in Step 5 ]
-          </div>
+          {/* Bottom Info Grid Cards */}
+          <InfoGrid />
         </div>
       </main>
     </div>
