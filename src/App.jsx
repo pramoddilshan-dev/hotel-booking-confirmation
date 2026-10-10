@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
+import StackedCards from './components/StackedCards';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -7,7 +8,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-neutral-100 font-sans">
       
-      {/* Mobile Top Header bar */}
+      {/* Mobile Top Header */}
       <div className="lg:hidden flex items-center justify-between p-6 bg-neutral-50 border-b border-neutral-200">
         <div className="flex items-center gap-2">
           <span className="font-serif italic text-lg text-terracotta-600 leading-none">Maison</span>
@@ -33,8 +34,8 @@ export default function App() {
       {/* Main Content Area */}
       <main className="flex-1 p-6 lg:p-12 overflow-y-auto">
         <div className="max-w-4xl mx-auto">
-          {/* Header Title section */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+          {/* Header Title Section */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <p className="text-xs uppercase tracking-widest font-mono text-neutral-600 mb-1">
                 Booking · Confirmed
@@ -55,9 +56,12 @@ export default function App() {
             </div>
           </div>
 
-          {/* Placeholder for Stacked Cards / Receipt Section in next step */}
-          <div className="p-8 border-2 border-dashed border-neutral-300 rounded-3xl text-center text-neutral-500 font-mono text-sm">
-            [ Stacked Receipt & Welcome Cards Component will go here next ]
+          {/* Stacked Cards Section */}
+          <StackedCards />
+
+          {/* Placeholder for Bottom Info Grid (Arrival, Wifi, Breakfast) */}
+          <div className="mt-8 p-6 border-2 border-dashed border-neutral-300 rounded-3xl text-center text-neutral-500 font-mono text-sm">
+            [ Info Grid Cards Section will go here in Step 5 ]
           </div>
         </div>
       </main>
